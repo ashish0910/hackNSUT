@@ -89,7 +89,11 @@ function drawKeypoints()  {
       });
     }
     if(cycle==10 && saved==false){
-      console.log("e over");
+      console.log("over");
+      var msg = new SpeechSynthesisUtterance('You did a great job');
+      msg.rate = 0.9;
+      window.speechSynthesis.speak(msg);
+      saved=true;
     //   $.ajax({
     //     type:"GET",
     //     url :"/save/sarthak",
