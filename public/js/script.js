@@ -5,4 +5,4 @@ setInterval(()=>{
   setTimeout(()=>{
     $slideShow.classList.add('activate');
   },10);
-},15200);
+},14500);
