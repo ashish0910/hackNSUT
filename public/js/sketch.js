@@ -81,7 +81,7 @@ function drawKeypoints()  {
     }
 
     if(cycle!=prev){
-      console.log(cycle);
+      console.log("cycle: " + cycle);
       // document.getElementById("sarthak").innerHTML=cycle;
       $("#sarthak").fadeOut("slow",()=>{
         $("#sarthak").html(cycle);

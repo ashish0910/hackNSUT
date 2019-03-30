@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  background: #0c0c0c;
+  color: #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  font-size: 50px;
+}
+
+h1 span{
+  color: lawngreen;
+}
+
+#status{
+  /* display: none; */
+}
