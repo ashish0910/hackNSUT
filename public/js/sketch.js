@@ -15,6 +15,7 @@ let l1=false;
 let l2=false;
 let l3=false;
 let cycle=0;
+var prev=0;
 
 function setup() {
   createCanvas(640, 480);
@@ -81,10 +82,19 @@ function drawKeypoints()  {
       l1=true;
       l2=false;
       l3=false;
+      prev=cycle;
       cycle++;
       
+      
     }
-    console.log(cycle);
+    if(cycle!=prev){
+      console.log(cycle);
+      $("#sarthak").fadeOut("slow",()=>{
+        $("#sarthak").html(cycle);
+        $("#sarthak").fadeIn();
+      });
+    }
+    
   }
  
 }
