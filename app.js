@@ -1,20 +1,12 @@
 const express = require('express');
 var app = express();
-var port =  3000;
+var port =  3000 || process.env.PORT;
 var bodyParser = require('body-parser');
 const say = require('say')
 const path = require('path');
 
-
 app.use(bodyParser.json({ limit: '50mb' }));
 
-app.use(express.static(__dirname + '/public'));
-
-app.get('/', function (req, res) {
-   res.sendFile(path.join(__dirname + '/public/index.html'));
-   // say.speak("","",0.8 );
-});
-
-
+app.use(express.static(path.join(__dirname,'public')));
 
 app.listen(port);
