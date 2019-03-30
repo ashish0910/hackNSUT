@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "mongoose": "^5.4.20",
     "say": "^0.15.0",
     "text-to-speech-js": "^1.1.9"
   },

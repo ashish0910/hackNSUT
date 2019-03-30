@@ -1,6 +1,12 @@
 let video;
 let poseNet;
 let poses = [];
+let l1=false;
+let l2=false;
+let l3=false;
+let cycle=0;
+var prev=0;
+var saved = false;
 
 function setup() {
   createCanvas(640, 480);
@@ -47,6 +53,63 @@ function drawKeypoints()  {
       }
     }
   }
+
+  if(poses.length!=0){
+    l1=true;
+    if(abs(poses[0].pose.leftShoulder.y-poses[0].pose.leftWrist.y)<30&&abs(poses[0].pose.rightShoulder.y-poses[0].pose.rightWrist.y)<30&&l1==true){
+      l2=true;
+      l3=false;
+      l1=false;
+      
+    }
+
+    if(poses[0].pose.leftWrist.y<poses[0].pose.leftEye.y && poses[0].pose.rightWrist.y<poses[0].pose.rightEye.y && l2==true){
+      l3=true;
+      l2=false;
+      l1=false;
+    
+     
+    }
+    if(poses[0].pose.leftWrist.y < (poses[0].pose.leftShoulder.y-30) && poses[0].pose.rightWrist.y < (poses[0].pose.rightShoulder.y-30) && l3==true){
+      l1=true;
+      l2=false;
+      l3=false;
+      
+      cycle++;
+      
+      
+    }
+
+    if(cycle!=prev){
+      console.log(cycle);
+      // document.getElementById("sarthak").innerHTML=cycle;
+      $("#sarthak").fadeOut("slow",()=>{
+        $("#sarthak").html(cycle);
+        $("#sarthak").fadeIn();
+      });
+    }
+    if(cycle==10 && saved==false){
+      console.log("e over");
+    //   $.ajax({
+    //     type:"GET",
+    //     url :"/save/sarthak",
+    //     success : function(msg){
+    //        console.log(msg);
+    //        saved=true;
+       
+    //     }
+    // });
+    }
+    prev=cycle;
+    
+  }
+ 
+}
+
+function xAxis(lx,ly){
+
+  
+
 }
 
 // A function to draw the skeletons
