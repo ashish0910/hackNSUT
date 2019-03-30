@@ -16,6 +16,7 @@ let l2=false;
 let l3=false;
 let cycle=0;
 var prev=0;
+var saved = false;
 
 function setup() {
   createCanvas(640, 480);
@@ -69,6 +70,7 @@ function drawKeypoints()  {
       l2=true;
       l3=false;
       l1=false;
+      
     }
 
     if(poses[0].pose.leftWrist.y<poses[0].pose.leftEye.y && poses[0].pose.rightWrist.y<poses[0].pose.rightEye.y && l2==true){
@@ -82,18 +84,33 @@ function drawKeypoints()  {
       l1=true;
       l2=false;
       l3=false;
-      prev=cycle;
+      
       cycle++;
       
       
     }
+
     if(cycle!=prev){
       console.log(cycle);
+      // document.getElementById("sarthak").innerHTML=cycle;
       $("#sarthak").fadeOut("slow",()=>{
         $("#sarthak").html(cycle);
         $("#sarthak").fadeIn();
       });
     }
+    if(cycle==10 && saved==false){
+      console.log("e over");
+    //   $.ajax({
+    //     type:"GET",
+    //     url :"/save/sarthak",
+    //     success : function(msg){
+    //        console.log(msg);
+    //        saved=true;
+       
+    //     }
+    // });
+    }
+    prev=cycle;
     
   }
  
