@@ -90,7 +90,7 @@ function drawKeypoints()  {
     }
     if(cycle==10 && saved==false){
       console.log("over");
-      var msg = new SpeechSynthesisUtterance('You did a great job');
+      var msg = new SpeechSynthesisUtterance('You did a great job . You burnt 5 calories . Your arms could have gone bit more higher .');
       msg.rate = 0.9;
       window.speechSynthesis.speak(msg);
       saved=true;
