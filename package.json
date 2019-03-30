@@ -1,0 +1,16 @@
+{
+  "name": "hacknsut",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sarthak sadh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "say": "^0.15.0",
+    "text-to-speech-js": "^1.1.9"
+  }
+}
