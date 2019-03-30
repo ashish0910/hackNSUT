@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build": "parcel public/index.html"
   },
   "author": "sarthak sadh",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "express": "^4.16.4",
     "say": "^0.15.0",
     "text-to-speech-js": "^1.1.9"
+  },
+  "devDependencies": {
+    "node-sass": "^4.11.0"
   }
 }
