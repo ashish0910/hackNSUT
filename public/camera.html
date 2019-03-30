@@ -20,18 +20,20 @@
     <p id='status'>Loading model...</p>
   </div>
   <!-- <div id="container"></div> -->
-  <div id="sarthak">0</div>
-  <img src="./anime.gif">
+  <div class="counter-flex">
+    <div id="counter"><span id="sarthak">0</span> WRAPS DONE</div>
+    <img src="./anime.gif">
+  </div>
   <script src="./js/sketch.js"></script>
   <script src="./js/algo.js"></script>
+  <script>
+    let status = document.querySelector('#status');
+    setInterval(() => {
+      if (status.innerHTML === "Model Loaded") {
+        //
+      }
+    }, 10);
+  </script>
 </body>
-
-<script>
-  let status = document.querySelector('#sarthak');
-  console.log(status.innerHTML);
-  if(status.innerHTML === "Model Loaded"){
-    alert('loaded');
-  }
-</script>
 
 </html>

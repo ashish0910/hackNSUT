@@ -1,12 +1,14 @@
 body{
   margin: 0;
-  background: #0c0c0c;
+  background: #111;
   color: #ccc;
   font-family: 'Montserrat', sans-serif;
+  overflow: hidden;
 }
 
 h1{
   font-size: 50px;
+  margin-left: 50px;
 }
 
 h1 span{
@@ -14,5 +16,40 @@ h1 span{
 }
 
 #status{
-  /* display: none; */
+  display: none;
 }
+
+.counter-flex{
+  position: absolute;
+  top:20vh;
+  width:50vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+canvas{
+  position: absolute;
+  top:20vh;
+  right: 10vw;
+  box-shadow: 0 0 20px #000;
+}
+
+#counter{
+  font-size: 50px !important;
+  font-weight: 900;
+  color: #777;
+}
+
+#sarthak{
+  color: lawngreen;
+}
+
+img{
+  margin-top:10vh;
+  box-shadow: 0 0 20px #000;
+}
+
+
