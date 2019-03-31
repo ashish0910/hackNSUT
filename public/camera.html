@@ -22,15 +22,21 @@
   <!-- <div id="container"></div> -->
   <div class="counter-flex">
     <div id="counter"><span id="sarthak">0</span> WRAPS DONE</div>
+    <a href="/results" id="results">SEE <span>RESULTS</span></a>
     <img src="./anime.gif">
   </div>
   <script src="./js/sketch.js"></script>
   <script src="./js/algo.js"></script>
   <script>
     let status = document.querySelector('#status');
+    let counter = document.querySelector('#sarthak');
     setInterval(() => {
       if (status.innerHTML === "Model Loaded") {
         //
+      }
+      if(counter.innerHTML === "10"){
+        document.querySelector("#counter").style.display = "none";
+        document.querySelector("#results").style.display = "inline-block";
       }
     }, 10);
   </script>

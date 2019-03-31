@@ -1,6 +1,6 @@
 const express = require('express');
 var app = express();
-var port = 2000 || process.env.PORT;
+var port = 3000 || process.env.PORT;
 var bodyParser = require('body-parser');
 const say = require('say')
 const path = require('path');
@@ -40,7 +40,7 @@ res.send(name);
 app.get("/camera",(req,res)=>{
     res.sendFile(path.join(__dirname + '/public/camera.html'));
 });
-app.get("/leaderboard",(req,res)=>{
+app.get("/results",(req,res)=>{
     res.sendFile(path.join(__dirname + '/public/lb.html'));
 });
 
