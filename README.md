@@ -1,2 +1,2 @@
-# hackNSUT
-Live demo : [Here](https://hacknsut.abhimonga16.now.sh/public/index.html)
+# HackNSUT
+Check out it live [Here](https://expro-v1.herokuapp.com/)
